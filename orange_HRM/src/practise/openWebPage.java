@@ -14,6 +14,9 @@ public class openWebPage {
 		driver.navigate().to("http://classroom:90/qahrm");
 		//to get current driver handle
 		String id=driver.getWindowHandle();
+		
+		
+		driver.close();
 	}
 
 }
