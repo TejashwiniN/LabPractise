@@ -13,10 +13,8 @@ public class TC_2
 		y.setup();
 		y.HomePage();
 		y.Verify_Elements();
+		y.Lead();
+		
 	}
-	@Test
-	public void Lead()
-	{
 	
-	}
 }

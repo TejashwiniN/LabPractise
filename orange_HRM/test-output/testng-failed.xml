@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="practise.TestNg_practise">
+      <class name="vtiger_CRM.TC_2">
         <methods>
-          <include name="setup"/>
-          <include name="Verify_Elements"/>
-          <include name="ShutDown"/>
+          <include name="m"/>
         </methods>
-      </class> <!-- practise.TestNg_practise -->
+      </class> <!-- vtiger_CRM.TC_2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

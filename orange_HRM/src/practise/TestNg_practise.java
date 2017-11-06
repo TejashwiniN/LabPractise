@@ -1,9 +1,7 @@
 package practise;
 
 
-import javax.swing.Action;
-
-import org.omg.CORBA.PUBLIC_MEMBER;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,18 +9,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.Reporter;
-import org.testng.annotations.*;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 import static org.testng.Assert.*;
+
+import org.apache.xpath.operations.Div;
 
 public class TestNg_practise 
 {
 	WebDriver driver;
 	WebDriverWait wait;
-	@BeforeClass
+
 	public void setup()
 	{
 		System.setProperty("webdriver.chrome.driver", "D:\\tet\\Selenium_Demp\\chromedriver.exe" );
@@ -30,13 +26,13 @@ public class TestNg_practise
 		wait= new WebDriverWait(driver,60);
 		driver.manage().window().maximize();
 	}
-	@AfterClass
+	
 	public void ShutDown()
 	{
 		driver.close();
 		driver.quit();
 	}
-	@Test
+	
 	public void HomePage()
 	{
 		
@@ -71,7 +67,7 @@ public class TestNg_practise
 		driver.findElement(By.id("submitButton")).click();
 		
 	}
-	@Test
+	
 	public void Verify_Elements()
 	{
 		boolean obj_Title=wait.until(ExpectedConditions.titleIs("user1 - Home - vtiger CRM 5 - Commercial Open Source CRM"));
@@ -93,7 +89,7 @@ public class TestNg_practise
 			System.out.println("all fields are displayed");
 		}
 	}
-	@Test
+	
 	public void logout()throws Exception
 	{
 		Actions Act=new Actions(driver);
@@ -109,7 +105,7 @@ public class TestNg_practise
 		}
 		
 	}
-	@Test
+
 	public void Lead()
 	{
 		driver.findElement(By.linkText("Leads")).click();
@@ -119,7 +115,32 @@ public class TestNg_practise
 			System.out.println("leads page is displayed");
 		}
 		driver.findElement(By.xpath("html/body/table[3]/tbody/tr[2]/td[2]/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr/td[1]/a/img")).click();
+		boolean obj_LeadPage=wait.until(ExpectedConditions.titleIs("user1 - Leads - vtiger CRM 5 - Commercial Open Source CRM"));
+		if (obj_LeadPage)
+		{
+			System.out.println("Lead page verified");
+		}
+		driver.findElement(By.xpath("html/body/table[3]/tbody/tr[2]/td[2]/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr/td[1]/a/img")).click();
+		WebElement obj_createLead=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/table[4]/tbody/tr/td[2]/div/span")));
+		if (obj_createLead.isDisplayed())  
+		{
+			System.out.println("creating lead is dispalyed");
+		}
+		/*Alert A=wait.until(ExpectedConditions.alertIsPresent());
+		if (A.getText().equals("Last Name cannot be empty")) 
+		{
+			System.out.println("alert is displayed");
+			A.accept();
+		}*/
+		driver.findElement(By.xpath("//table[@class='small']/tbody/tr[4]/td[2]/input")).sendKeys("Teja");
+		driver.findElement(By.xpath("//table[@class='small']/tbody/tr[5]/td[2]/input")).sendKeys("company");
+			//click on save
+			driver.findElement(By.xpath("//table[@class='small']/tbody/tr[1]/td/div/input[1]")).click();
+		
+		
+		
 	}
+	
 
 	
 }
