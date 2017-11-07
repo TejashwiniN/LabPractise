@@ -20,7 +20,9 @@ public class Ex_1
 		//sheet.getcell(Column index,row index)
 		String grow=S1.getCell(0,i).getContents();
 		System.out.println(grow);
+		System.out.println("hello");
 
 	}
+	
 
 }
