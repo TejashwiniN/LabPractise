@@ -38,13 +38,14 @@ public class flipkart
        driver.findElement(By.xpath("//html/body/div/div/header/div[2]/div/ul/li[1]/ul/li/ul/li[1]/ul/li[2]/a/span")).click();
        Thread.sleep(7000);
        //click on view all
-        driver.findElement(By.xpath("//html/body/div/div/div[1]/div/div/div[3]/div/div/div[1]/div[1]/div/div/a")).click();
+        driver.findElement(By.xpath("//html/body/div/div/div[1]/div/div/div[3]/div/div/div[1]/div[1]/div/div/a/span")).click();
         Thread.sleep(4000);
        //click on price high to low
-        driver.findElement(By.xpath("//html/body/div[1]/div/div[1]/div/div[2]/div/div[2]/div/div[2]/section/ul/li[3]")).click();
+        driver.findElement(By.xpath("//html/body/div/div/div[1]/div/div[2]/div/div[2]/div/div[2]/section/ul/li[3]")).click();
         //driver.findElements(By.className("3wU53n"));
         
         int rc=driver.findElements(By.xpath("//html/body/div[1]/div/div[1]/div/div[2]/div/div[2]/div/div[3]/div[1]/div/div/div/a/div[2]/div[1]/div[1]")).size();
+        System.out.println(rc);
         for (int i = 1; i <=rc; i++) {
         	 String str=driver.findElement(By.xpath("//html/body/div[1]/div/div[1]/div/div[2]/div/div[2]/div/div[3]/div[1]/div/div["+i+"]/div/a/div[2]/div[1]/div[1]")).getText();
              System.out.println(str);
