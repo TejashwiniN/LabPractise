@@ -1,5 +1,7 @@
 package practise;
 
+import java.awt.Label;
+import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 
@@ -7,12 +9,63 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import jxl.Workbook;
+import jxl.write.WritableWorkbook;
+
 public class Property_Ex1 
 {
 
 	public static void main(String[] args)throws Exception 
 	{
 		Properties obj=new Properties();
+		 obj.load(new FileInputStream("C:\\Users\\Lab\\git\\LabPractise\\orange_HRM\\src\\webDriverEx\\example.property")); 
+		 String S_URL=obj.getProperty("URl");
+		 String S_UN=obj.getProperty("URl");
+		 String S_PW=obj.getProperty("URl");
+		 WritableWorkbook workbook=Workbook.createWorkbook(new File("D:\\experiment.xls"));
+		 workbook.createSheet("exp1", 0);
+		 workbook.createSheet("exp2", 1);
+		 
+		 
+		 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*Properties obj=new Properties();
 		obj.load(new FileInputStream("C:\\Users\\Lab\\git\\LabPractise\\orange_HRM\\src\\webDriverEx\\example.property"));
 		String Surl=obj.getProperty("URl");
 		String UN=obj.getProperty("UN");
@@ -32,7 +85,7 @@ public class Property_Ex1
 			Thread.sleep(2000);
 			driver.findElement(By.linkText("Logout")).click();		
 			driver.close();
-			driver.quit();
+			driver.quit();*/
 	}
 
 }

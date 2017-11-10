@@ -220,6 +220,9 @@ public class editEmployee
 					break;
 					}
 				}
+				/*driver.manage().timeouts().implicitlyWait(arg0, arg1)
+				driver.manage().timeouts().setScriptTimeout(arg0, arg1)
+				driver.manage().timeouts().pageLoadTimeout(arg0, arg1)*/
 		/*
 		WebElement steja=driver.findElement(By.xpath("//table[@class='data-table']/tbody/tr[1]/td[2]"));
 		Act.moveToElement(steja).perform();

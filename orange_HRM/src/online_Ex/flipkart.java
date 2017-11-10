@@ -51,6 +51,7 @@ public class flipkart
         Thread.sleep(4000);
        //click on price high to low
         driver.findElement(By.xpath("//html/body/div/div/div[1]/div/div[2]/div/div[2]/div/div[2]/section/ul/li[3]")).click();
+        Thread.sleep(2000);
         //driver.findElements(By.className("3wU53n"));
                                                
         List<WebElement>  rc=driver.findElements(By.xpath("//html/body/div[1]/div/div[1]/div/div[2]/div/div[2]/div/div[3]/div[1]/div/div/div/a/div[2]/div[1]/div[1]"));
@@ -69,7 +70,7 @@ public class flipkart
      		
      		
      		 String str1=driver.findElement(By.xpath("//html/body/div/div/div[1]/div/div[2]/div/div[2]/div/div[3]/div[1]/div/div["+i+"]/div/a/div[2]/div[2]/div[1]/div/div")).getText();
-             System.out.println(str);
+             System.out.println(str1);
              Thread.sleep(2000);
             Label L2= new Label(1, i, str1);
      		Sheet.addCell(L2);
