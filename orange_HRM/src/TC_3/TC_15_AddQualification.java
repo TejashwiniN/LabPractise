@@ -167,7 +167,9 @@ public class TC_15_AddQualification
 			}
 	     }
 	     driver.switchTo().alert().accept();
-	     
+	     driver.switchTo().defaultContent();
+	     driver.switchTo().parentFrame();
+	    
 	      
 	      
 	      

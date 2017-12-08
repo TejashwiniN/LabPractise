@@ -204,6 +204,7 @@ public class editEmployee
 				{
 				System.out.println("Employee Information is displayed");	
 				}
+				
 				//---------------------------------------------------
 				//get row count
 				int rc1=driver.findElements(By.xpath("//table[@class='data-table']/tbody/tr")).size();

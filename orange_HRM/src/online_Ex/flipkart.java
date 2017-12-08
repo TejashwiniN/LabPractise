@@ -26,6 +26,8 @@ public class flipkart
 
 	public static void main(String[] args)throws Exception
 	{
+		
+		
 		System.setProperty("webdriver.chrome.driver", "D:\\tet\\Selenium_Demp\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);

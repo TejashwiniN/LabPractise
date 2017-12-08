@@ -1,7 +1,11 @@
 package practise;
 
 
-import org.openqa.selenium.Alert;
+
+import org.testng.Assert;
+import org.testng.AssertJUnit;
+import static org.testng.Assert.assertTrue;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,9 +14,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
-import static org.testng.Assert.*;
 
-import org.apache.xpath.operations.Div;
+
+
 
 public class TestNg_practise 
 {
@@ -46,13 +50,10 @@ public class TestNg_practise
 		 //verify username
 		WebElement obj_UN=wait.until(ExpectedConditions.presenceOfElementLocated(By.name("user_name")));
 		
-		assertTrue(obj_UN.isDisplayed());
+		Assert.assertTrue(obj_UN.isDisplayed());
 		Reporter.log("username is displayed");
 		
-	/*	if (obj_UN.isDisplayed()) 
-		{
-			System.out.println("username is displayed");
-		}*/
+	
 		//verify password
 		WebElement obj_PW=wait.until(ExpectedConditions.presenceOfElementLocated(By.name("user_password")));
 		if (obj_PW.isDisplayed()) 
@@ -106,9 +107,9 @@ public class TestNg_practise
 		
 	}
 
-	public void Lead()
+	public void Lead()throws Exception
 	{
-		driver.findElement(By.linkText("Leads")).click();
+		driver.findElement(By.linkText("Leads")).click();Thread.sleep(2000);
 		WebElement obj_lead=wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Leads")));
 		if (obj_lead.isDisplayed()) 
 		{
@@ -126,16 +127,11 @@ public class TestNg_practise
 		{
 			System.out.println("creating lead is dispalyed");
 		}
-		/*Alert A=wait.until(ExpectedConditions.alertIsPresent());
-		if (A.getText().equals("Last Name cannot be empty")) 
-		{
-			System.out.println("alert is displayed");
-			A.accept();
-		}*/
+		
 		driver.findElement(By.xpath("//table[@class='small']/tbody/tr[4]/td[2]/input")).sendKeys("Teja");
 		driver.findElement(By.xpath("//table[@class='small']/tbody/tr[5]/td[2]/input")).sendKeys("company");
-			//click on save
-			driver.findElement(By.xpath("//table[@class='small']/tbody/tr[1]/td/div/input[1]")).click();
+		//click on save
+		driver.findElement(By.xpath("//table[@class='small']/tbody/tr[1]/td/div/input[1]")).click();Thread.sleep(2000);
 		
 		
 		

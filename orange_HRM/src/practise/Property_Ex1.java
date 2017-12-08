@@ -16,56 +16,18 @@ public class Property_Ex1
 {
 
 	public static void main(String[] args)throws Exception 
-	{
+	{/*
 		Properties obj=new Properties();
 		 obj.load(new FileInputStream("C:\\Users\\Lab\\git\\LabPractise\\orange_HRM\\src\\webDriverEx\\example.property")); 
 		 String S_URL=obj.getProperty("URl");
-		 String S_UN=obj.getProperty("URl");
-		 String S_PW=obj.getProperty("URl");
+		 String S_UN=obj.getProperty("UN");
+		 String S_PW=obj.getProperty("PW");
 		 WritableWorkbook workbook=Workbook.createWorkbook(new File("D:\\experiment.xls"));
 		 workbook.createSheet("exp1", 0);
 		 workbook.createSheet("exp2", 1);
-		 
-		 
-		 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		/*Properties obj=new Properties();
+		 */	 
+		 				
+		Properties obj=new Properties();
 		obj.load(new FileInputStream("C:\\Users\\Lab\\git\\LabPractise\\orange_HRM\\src\\webDriverEx\\example.property"));
 		String Surl=obj.getProperty("URl");
 		String UN=obj.getProperty("UN");
@@ -76,7 +38,7 @@ public class Property_Ex1
 		WebDriver driver=new ChromeDriver();
 	     
 	     driver.navigate().to(Surl);
-	     driver.manage().window().maximize();
+	//     driver.manage().window().maximize();
 	     Thread.sleep(2000);
 	     driver.findElement(By.name("txtUserName")).clear();
 	     driver.findElement(By.name("txtUserName")).sendKeys(UN);
@@ -85,7 +47,7 @@ public class Property_Ex1
 			Thread.sleep(2000);
 			driver.findElement(By.linkText("Logout")).click();		
 			driver.close();
-			driver.quit();*/
+			driver.quit();
 	}
 
 }

@@ -13,7 +13,7 @@ public class Sikuli_Ex1
 		System.setProperty("webdriver.chrome.driver","D:\\tet\\Selenium_Demp\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		//To Maximize Browser
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.get("http://apps.qaplanet.in/qahrm/login.php");
 		
 		Screen screen=new Screen();

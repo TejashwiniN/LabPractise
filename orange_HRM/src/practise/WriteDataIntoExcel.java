@@ -20,7 +20,7 @@ public class WriteDataIntoExcel
 
 	public static void main(String[] args)throws Exception
 	{
-		WritableWorkbook wwb=Workbook.createWorkbook(new File("D:\\Login_Results.xls"));
+		WritableWorkbook wwb=Workbook.createWorkbook(new File("D:\\Login_Results11.xls"));
 		WritableSheet ws=wwb.createSheet("HRM", 0);
 		WritableSheet ws1=wwb.createSheet("RES", 1);
 		Label l=new Label(0,0,"Username");

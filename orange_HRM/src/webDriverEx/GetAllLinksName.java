@@ -17,9 +17,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 			System.setProperty("webdriver.chrome.driver","D:\\tet\\Selenium_Demp\\chromedriver.exe");
 			WebDriver driver=new ChromeDriver();
 			//---------------------------------------------------------------------
-			driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+			//driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 			driver.get("http://www.calculator.net/");
-			driver.manage().window().maximize();
+			//driver.manage().window().maximize();
 			List<WebElement> list=driver.findElements(By.tagName("a"));
 			//System.out.println(list.size());
 			//int txt=list.size();

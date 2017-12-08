@@ -7,13 +7,14 @@ import practise.TestNg_practise;
 public class TC_2
 {
 	@Test
-	public void m()
+	public void m() throws Exception
 	{
 		TestNg_practise y=new TestNg_practise();
 		y.setup();
 		y.HomePage();
 		y.Verify_Elements();
 		y.Lead();
+	
 		
 	}
 	

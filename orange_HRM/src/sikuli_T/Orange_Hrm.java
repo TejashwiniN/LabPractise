@@ -21,7 +21,7 @@ public class Orange_Hrm
 		System.setProperty("webdriver.chrome.driver","D:\\tet\\Selenium_Demp\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		//To Maximize Browser
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		//webdriver wait object
 		WebDriverWait wait=new WebDriverWait(driver,60);
 		//actions class
@@ -92,8 +92,8 @@ public class Orange_Hrm
 
         
 			   Screen screen = new Screen();
-				Pattern fileNameInput = new Pattern("D:\\abc.sikuli\\filename.png");
-				Pattern openButton = new Pattern("D:\\abc.sikuli\\open.png");
+				Pattern fileNameInput = new Pattern("D:\\aaaaaaa.sikuli\\filename.png");
+				Pattern openButton = new Pattern("D:\\aaaaaaa.sikuli\\open.png");
  
         
         screen.type(fileNameInput, "D:\\New folder\\Tulips.jpg");

@@ -1,0 +1,9 @@
+<suite name="example suite 1" verbose="1" >
+  <test name="Regression suite 1" >
+    <classes>
+       <class name="TC_1.java"/>
+      <class name="TC_3_EditLead.java"/>
+      
+    </classes>
+ </test>
+</suite>
